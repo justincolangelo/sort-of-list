@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+    
+        <title>Sort of List | jQuery list sort</title>
+    
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="sort-of-list.js"></script>
+
+    </head>
+    
+    <body>
+    
+        <ul>
+            <li>Smashing Magazine</li>
+            <li>A List Apart</li>
+            <li>Reddit</li>
+            <li>CSS Tricks</li>
+            <li>Stack Overflow</li>
+            <li>Github</li>
+            <li>Javascript</li>
+        </ul>
+    
+        <button type="button" class="sort" data-sort="asc">A - Z</button>
+        <button type="button" class="sort" data-sort="desc">Z - A</button>
+    
+        <script type="text/javascript">
+            
+            $(document).ready(function(){
+            
+                $('.sort').click(function(){
+                    var sort = $(this).data('sort');
+                    $('ul').sortOfList({
+                        order: sort
+                    });
+                });
+            
+            });
+            
+        </script>
+    
+    </body>
+    
+</html>
